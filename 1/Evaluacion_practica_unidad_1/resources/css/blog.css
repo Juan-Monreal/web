@@ -39,7 +39,6 @@ body {
 .container {
 	float: left;
 	width: 75%;
-	background: #F4EBEB;
 }
 
 .section {
@@ -74,16 +73,16 @@ body {
 	Responsive Layout!
  */
 
-@media screen(max-width: 400px){
-	.menu {
-		float: none;
-		width: 100%;
-	}
-}
-
-@media screen(max-width: 900px) {
+@media screen and (max-width: 800px) {
 	.container, .sidebar {
 		width: 100%;
 		padding: 0;
 	}
 }
+@media screen and (max-width: 400px){
+	.menu a{
+		float: none;
+		width: 100%;
+	}
+}
+

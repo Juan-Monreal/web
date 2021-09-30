@@ -6,6 +6,7 @@
  2. Menú o enlaces a las diferentes secciones dentro de la página (Tu puedes colocar un enlace a una parte dentro de la misma página si en la propiedad href colocas el id del elemento al que deseas desplazarte. Ejemplo. si hay una sección con el ID "seccion1" en la propiedad href del enlace basta con colocar "#seccion1".
  3. Articulo Contenido principal
 	1. Sección "Arquitectura cliente-servidor" ¿Que es la arquitectura Cliente-Servidor?
+
 	2. Sección Front-End
 		1. ¿Que es el Front-End?
 		2. ¿Cuales son los roles dentro del Front-End?
@@ -23,6 +24,7 @@
 [¿Que es el BackEnd?](https://youtu.be/50RbVujPPGs)  
 [Los roles en Front-End](https://youtu.be/N8mFHB7JDkw)  
 [Los roles en BackEnd](https://youtu.be/ZTsi1e-VJIU)  
+[Carpeta de videos](https://drive.google.com/drive/folders/1HDXqmDWAgTRjLxCOwXrSNJWSuQQVpfAf?usp=sharing)
 
 **Requerimientos:** Se evaluará el ´contenido y empleo de archivos css para estilo asi como aplicación de diseño responsivo para computadoras y dispositivos móviles.
 
