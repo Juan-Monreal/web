@@ -1,7 +1,7 @@
 # web
 Course: ITI-27725, Web development
 
-**Only Resume moved as root index, because is a requirement**  
+**Only Resume moved as root index, because it's a requirement**  
 
 ## Structure
  1. For Unit 1
