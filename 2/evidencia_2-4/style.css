@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 10px;
+	font-family: Arial, sans-serif;
+	background: #F4EBEB;
+}
+label {
+	color: blue;
+	padding:  12px 12px 12px 0;
+	display: inline-block;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  	background-color: #4CAF50;
+  	border: none;
+  	color: white;
+  	padding: 16px 32px;
+  	text-decoration: none;
+  	margin: 4px 2px;
+  	cursor: pointer;
+  	margin-top: 10px;
+}
+input[type=text], input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.header {
+	padding: 10px;
+	text-align: center;
+	background-color: white;
+	color: white;
+	font-size: 20px;
+	background: #595858;
+}
+.main {
+	float: left;
+	width: 30%;
+}
+
+.section {
+	padding: 15px;
+	background-color: white;
+	margin-top: 15px;
+}
+
+.card {
+	padding: 15px;
+	margin-top: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  	transition: 0.3s;
+  	border-radius: 5px;
+  	border-style: solid;
+}
+
+.container:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.sidebar {
+	padding-left: 20px;
+	float: left;
+	width: 25%;
+	background: #F4EBEB;
+}
+
+.image {
+	border-radius: 10px;
+	width: 200%;
+}
+.result {
+	color: black;
+	width: 100%;
+  	padding: 12px;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	background: white;
+}
