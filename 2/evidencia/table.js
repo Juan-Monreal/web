@@ -35,18 +35,35 @@ function solve(table, result){
 	for(let i = 0; i < result; i++){
 		let column = document.createElement("tr");
 			
-		for (let j = 0; j < 1; j++){
-			let row = document.createElement("td");
-			let text = document.createTextNode( table + " * " + (i + 1 ) + " = " + (table * (i + 1 )) );
-			row.appendChild(text);
-			column.appendChild(row);
-		}
+		
+		let row1 = document.createElement("td");
+		let row2 = document.createElement("td");
+		let row3 = document.createElement("td");
+		let row4 = document.createElement("td");
+		let row5 = document.createElement("td");
+		//let text = document.createTextNode( table + " * " + (i + 1 ) + " = " + (table * (i + 1 )) );
+		let text1 = document.createTextNode(table);
+		let text2 = document.createTextNode(" * ");
+		let text3 = document.createTextNode((i + 1 ));
+		let text4 = document.createTextNode(" = ");
+		let text5 = document.createTextNode((table * (i + 1 )) );
+		row1.appendChild(text1);
+		row2.appendChild(text2);
+		row3.appendChild(text3);
+		row4.appendChild(text4);
+		row5.appendChild(text5);
+		column.appendChild(row1);
+		column.appendChild(row2);
+		column.appendChild(row3);
+		column.appendChild(row4);
+		column.appendChild(row5);
+		
 		tbody.appendChild(column);
 	}
 
 	tabla.appendChild(tbody);
 	query.appendChild(tabla);
-	tabla.setAttribute("border", "5")
+	tabla.setAttribute("border", "2")
 }
 
 /**
