@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carrousel</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<main class="container">
+		<div onmouseenter="pauseSlides();" onmouseleave="startSlides();">
+			<div class="slide fade">
+				<div class="numbertext">1/3</div>
+				<img src="images/1.png" style="width: 100%;">
+				<div class="text">Image 1</div>
+			</div>
+			<div class="slide fade">
+				<div class="numbertext">2/3</div>
+				<img src="images/2.jpg" style="width: 100%;">
+				<div class="text">Image 2</div>
+			</div>
+			<div class="slide fade">
+				<div class="numbertext">3/3</div>
+				<img src="images/3.jpg" style="width: 100%;">
+				<div class="text">Image 3</div>
+			</div>
+		</div>
+		<a class="prev" onclick="plusSlide(-1);">&#10094;</a>
+		<a class="next" onclick="plusSlide(1);">&#10095;</a>
+	</main>
+	<div style="text-align:center">
+  		<span class="dot" onclick="currentSlide(1)"></span> 
+  		<span class="dot" onclick="currentSlide(2)"></span> 
+  		<span class="dot" onclick="currentSlide(3)"></span> 
+	</div>
+</body>
+	<script type="text/javascript">
+		//Control Variables
+		let slideIndex = 1;
+		let millis = 2500;
+		let interval;
+
+		startSlides();//Start the carrousel
+		//showSlides(slideIndex);
+		/**
+		 * Start the carrousel
+		 * Initilize the switching between images and launch the another image
+		 * 
+		 */
+		function startSlides(){
+			pauseSlides();
+			nextSlide();
+			interval = setInterval(nextSlide, millis)
+		}
+		/**
+		 * Handle the next and previous button
+		 * Only accepts -1 or 1 to addition on the current slide index
+		 * @param  {Integer} n 
+		 */
+		function plusSlide(n) {
+			clearInterval(interval);
+			slideIndex += n;
+			nextSlide();
+	  		//showSlides(slideIndex += n);
+	  		interval = setInterval(nextSlide, millis)
+		}
+		/**
+		 * Handle the dot's
+		 * Sets the current slide {1, 2, 3}
+		 * @param  {Integer} n Index of the image
+		 */
+		function currentSlide(n) {
+	  		//showSlides(slideIndex = n);
+	  		clearInterval(interval);
+	  		slideIndex = n;
+	  		nextSlide();
+	  		interval = setInterval(nextSlide, millis);
+		}
+
+		/**
+		 * Pauses the carrousel
+		 */
+		function pauseSlides(){
+			clearInterval(interval);
+		}
+		/**
+		 * Next slide to be showed
+		 * Add one to the current index
+		 */
+		function nextSlide(){
+			showSlide();
+			slideIndex++;
+		}
+		/**
+		 * Show the slide's
+		 * Handle the rule ->  0 < slideindex < slide.length
+		 * Handle when the carrousel changes normally or when is selected by the dots
+		 */ 
+		function showSlide() {
+		  	let i;
+		  	let slides = document.getElementsByClassName("slide");
+		  	let dots = document.getElementsByClassName("dot");
+
+		  	if (slideIndex > slides.length)
+		  		slideIndex = 1;    
+		  	if (slideIndex < 1) 
+		  		slideIndex = slides.length;
+
+		  	for (i = 0; i < slides.length; i++) 
+		      	slides[i].style.display = "none";  
+		  	
+		  	for (i = 0; i < dots.length; i++) 
+		      	dots[i].className = dots[i].className.replace(" active", "");
+		  	
+		  	slides[slideIndex-1].style.display = "block";  
+		  	dots[slideIndex-1].className += " active";
+		}
+		/**
+		 * @deprecated
+		 * 
+		function showSlides(n) {
+		  	let i;
+		  	let slides = document.getElementsByClassName("slide");
+		  	let dots = document.getElementsByClassName("dot");
+		  	if (n || slideIndex > slides.length)
+		  		slideIndex = 1;    
+		  	if (n || slideIndex < 1) 
+		  		slideIndex = slides.length;
+
+		  	for (i = 0; i < slides.length; i++) 
+		      	slides[i].style.display = "none";  
+		  	
+		  	for (i = 0; i < dots.length; i++) 
+		      	dots[i].className = dots[i].className.replace(" active", "");
+		  	
+		  	slides[slideIndex-1].style.display = "block";  
+		  	dots[slideIndex-1].className += " active";
+		  	slideIndex++;
+		  	setTimeout(showSlides, 2000);
+		}
+		*/
+	</script>
+</html>
