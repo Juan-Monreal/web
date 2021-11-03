@@ -1,3 +1,4 @@
 #Ignored Files
 *.zip
 2/Scripts/
+*.php-tmp
