@@ -17,7 +17,7 @@
                     <th>Reference</th>
                 </tr>
                 <?php
-                    $consulta = "SELECT * FROM assitances";
+                    $consulta = "SELECT * FROM assistances";
                     $validacion = mysqli_query($conexion, $consulta);
                     while($record = mysqli_fetch_array($validacion)){
                 ?>
