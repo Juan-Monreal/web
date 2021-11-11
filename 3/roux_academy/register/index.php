@@ -1,32 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="../css/style.css">
-<title>Roux Conference: Register</title>
-</head>
-<body id="page_register">
-<div class="wrapper">
-  <header>
-    <div class="branding"> <img src="../images/ralogo_monogram.png" alt="Logo">
-      <p>Roux Academy<br>
-        Art • Media • Design</p>
-    </div>
-    <div class="description">
-      <h1>Roux Academy 2016 Art Conference</h1>
-      <p>Join over 500 hundred of the most creative and brilliant minds of art colleges all around the world for five days of lectures by world-renowned art scholars and artists, and seven days and nights of gallery exhibits featuring the best in contemporary art, including painting, sculpture, and more, in the beautiful halls of Hotel Contempo in the heart of Seattle.</p>
-    </div>
-    <nav>
-      <ol>
-        <li><a href="../index.php">HOME</a></li>
-        <li><a href="../artists.php">ARTISTS</a></li>
-        <li><a href="../schedule/index.php">SCHEDULE</a></li>
-        <li><a href="../venue.php">VENUE/TRAVEL</a></li>
-        <li><a href="index.php">REGISTER</a></li>
-      </ol>
-    </nav>
-  </header>
-  <div id="rotator"> <img src="../images/art01.jpg" alt="Artwork from show"> </div>
+<?php 
+  session_start();
+  if(isset($_SESSION['usuario'])){
+    include("../layouts/admin.php");
+    
+  }else{
+    include("../layouts/header.php");
+    
+  }
+?>
+
+
   <!-- Rotator -->
   <section id="main">
     <article>
@@ -36,12 +19,12 @@
     <!-- About the event -->
     
     <article id="registrationform">
-      <form method="POST" enctype="text/plain">
+      <form action="RegisterRequest.php" method="POST" >
         <fieldset>
           <legend>Personal Info</legend>
           <ol>
             <li>
-              <label for="myname">Name *</label>
+              <label for="myname">Name</label>
               <input type="text" name="myname" id="myname" autofocus placeholder="Last, First" required>
             </li>
             <li>
@@ -49,7 +32,7 @@
               <input type="text" name="companyname" id="companyname">
             </li>
             <li>
-              <label for="myemail">Email *</label>
+              <label for="myemail">Email </label>
               <input type="email" name="myemail" id="myemail" required autocomplete="off">
             </li>
             <li>
@@ -91,38 +74,8 @@
   <!-- maincontent -->
   
   <aside id="sidebar">
-    <article id="artistlist">
-      <h2>Featured Artists</h2>
-      <p>Each year, nine individuals are honored as Featured Artists - each being granted his or her own exhibit hall to display entire collections or themed pieces. Each Featured Artist has an opportunity to speak at the conference to share his or her vision, perspective, and techniques with conference attendees.</p>
-      <div class="pixgrid">
-        <ul>
-          <li><img src="../images/artists/Barot_Bellingham_tn.jpg" alt="Barot Bellingham"></li>
-          <li><img src="../images/artists/Constance_Smith_tn.jpg" alt="Constance Smith"></li>
-          <li><img src="../images/artists/Hassum_Harrod_tn.jpg" alt="Hassum Harrod"></li>
-          <li><img src="../images/artists/Hillary_Goldwynn_tn.jpg" alt="Hillary Goldwynn"></li>
-          <li><img src="../images/artists/Jennifer_Jerome_tn.jpg" alt="Jennifer Jerome"></li>
-          <li><img src="../images/artists/Jonathan_Ferrar_tn.jpg" alt="Jonathan Ferrar"></li>
-          <li><img src="../images/artists/LaVonne_LaRue_tn.jpg" alt="LaVonne LaRue"></li>
-          <li><img src="../images/artists/Riley_Rewington_tn.jpg" alt="Riley Rewington"></li>
-          <li><img src="../images/artists/Xhou_Ta_tn.jpg" alt="Xhou Ta"></li>
-        </ul>
-        <p><a class="link" href="../artists.php">Artist Info</a></p>
-      </div>
-    </article>
-    <!-- Featured Artists -->    <!-- Coming to event --> 
+  <?php include("../layouts/featured_artist.php")?>
   </aside>
   <!-- Sidebar -->
-  <footer>
-    <div class="branding"> <img src="../images/ralogo_monogram.png" alt="Logo"> </div>
-    <div class="description">Join over 500 hundred of the most creative and brilliant minds of art colleges all around the world for three days of lectures by world-renowned art scholars and artists.</div>
-    <nav>
-      <ol>
-        <li><a href="http://rouxacademy.com/about/about.htm">About the Roux Academy</a></li>
-        <li><a href="http://rouxacademy.com/privacy.htm">Privacy Policy</a></li>
-        <li><a href="http://rouxacademy.com/index.htm">Visit our website</a></li>
-      </ol>
-    </nav>
-  </footer>
-</div>
-</body>
-</html>
+
+  <?php include("../layouts/footer.php")?>

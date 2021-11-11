@@ -329,16 +329,31 @@ a.link:after {
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 }
-#page_artists .artistgroup h3 {
+
+.artistas{
+	width: 700px;
+	margin-left: -100px;
+}
+.artistas li{
+	width: 600px;
+}
+.artistas ul li p {
+	margin-left: 70px;
+}
+.artistas img {
+	margin-bottom: -70px;
+}
+
+.artistas h3 {
 	font-size: 1.1em;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-top: 1px dotted #333;
 }
-#page_artists .artistgroup p {
+.artistas p {
 	padding-bottom: 5px;
 }
-#page_artists .artistgroup img {
+.artistas img {
 	width: 100px;
 	float: right;
 	margin-left: 10px;
@@ -479,3 +494,113 @@ label[for=reference] {
 	float: left;
 	padding-right: 20px;
 }
+
+
+
+
+/* Cerrar sesion
+-------------------------------------------------------------------------------*/
+#rotator{
+	z-index: 1;
+}
+
+body div .cabeza{
+	margin-top: 50px;
+}
+
+body div .brandAdmin{
+	margin-top: -50px;
+}
+
+body div header #sesion{
+	border: 1px solid white;
+	border-radius: 5px;
+	width: 100px;
+	padding: 10px;
+	/* float: right; */
+	margin-top: -50px;
+	margin-left: 840px;
+}
+body div header #sesion label{
+	font-weight: 900;
+	margin-bottom: 10px;
+	margin-left: 40px;
+}
+
+
+body div header #confirmacion{
+	position: fixed;
+	z-index: 100;
+    margin-left: 300px;
+    margin-top: 200px;
+    width: 350px;
+    padding: 50px;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 8px grey;
+}
+
+body div header #confirmacion h1{
+	margin: 0 auto;
+	width: 250px;
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+body div header #confirmacion #salir{
+	padding: 5px;
+	background-color: #b20000;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	margin-left: 70px;
+	margin-right: 10px;
+}
+
+
+body div header #confirmacion #no{
+	padding: 5px;
+	background-color: transparent;
+	border: 2px solid grey;
+	border-radius: 7px;
+	color: grey;
+}
+
+
+.asistentes {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	margin-bottom: 20px;
+  }
+  
+  
+  .asistentes tr th:nth-child(1) {
+	width: 21%;
+  }
+  
+  .asistentes tr th:nth-child(2) {
+	width: 5%;
+  }
+  
+  .asistentes tr th:nth-child(3) {
+	width: 20%;
+  }
+
+  .asistentes tr th:nth-child(4) {
+	width: 15%;
+  }
+
+  .asistentes tr th:nth-child(5) {
+	width: 5%;
+  }
+
+  .asistentes tr th:nth-child(6) {
+	width: 10%;
+  }
+  
+  th, td {
+	padding: 10px;
+	border: 1px solid grey;
+  }
